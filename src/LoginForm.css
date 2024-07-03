@@ -1,0 +1,71 @@
+/* LoginForm.css */
+
+body {
+  background-color: #e0f7fa; /* Light cyan background */
+  font-family: "Roboto", sans-serif;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly larger shadow for a modern look */
+  width: max-content;
+  max-width: 400px;
+}
+
+.form-title {
+  margin-bottom: 30px;
+  color: #007bff; /* Dark cyan text */
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-label {
+  color: #007bff; /* Medium cyan label */
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #b2dfdb; /* Light cyan border */
+  font-size: 16px;
+}
+
+.submit-button {
+  color: #007bff; /* Primary cyan */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #004d40; /* Darker cyan on hover */
+}
+
+.error {
+  color: #d32f2f; /* Red for errors */
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .login-form {
+    padding: 20px;
+  }
+}

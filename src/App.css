@@ -1,20 +1,30 @@
+/* Import a modern font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
+.App-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.5));
+}
+
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(135deg, #282c34, #3a3f47);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,10 +32,79 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.App-header > * {
+  z-index: 2;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.App-link:hover {
+  color: #21a1f1;
+  border-bottom: 2px solid #21a1f1;
+}
+
+.App-button {
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: calc(10px + 1vmin);
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.App-button:hover {
+  background-color: #21a1f1;
+  transform: scale(1.05);
+}
+
+.App-button:active {
+  background-color: #1e90ff;
+  transform: scale(0.95);
+}
+
+.App-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.App-footer {
+  background: linear-gradient(135deg, #3a3f47, #282c34);
+  padding: 10px 20px;
+  color: white;
+  font-size: calc(8px + 1vmin);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
